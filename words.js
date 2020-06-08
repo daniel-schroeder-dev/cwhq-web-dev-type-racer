@@ -101,22 +101,3 @@ var words = [
     'deceive'
 ];
 
-
-var launchCodeInput = document.getElementById('input0');
-
-launchCodeInput.addEventListener('focus', () => {
-    var sound = addSoundEffect('helicopter.mp3');
-    setTimeout(() => {
-        sound.play();
-    }, 0);
-});
-
-var launchButton = document.getElementById('button0');
-
-launchButton.addEventListener('click', () => {
-    var sound = addSoundEffect('ignition.wav');
-    setTimeout(() => {
-        sound.play();
-    }, 10000);
-});
-
