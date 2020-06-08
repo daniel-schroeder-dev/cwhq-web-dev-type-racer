@@ -26,7 +26,7 @@
 
 	<p class="game-over-message">Game Over!</p>
 
-	<p class="timer">5</p>
+	<p class="timer">20</p>
 
 <script type="text/javascript" src="./words.js"></script>
 <script type="text/javascript">
@@ -39,7 +39,7 @@
 	
 	$('input').keyup(checkUserInput);
 
-	var time = 5;
+	var time = 20;
 	var interval = setInterval(() => {
 		time--;
 		$('.timer').text(time);
