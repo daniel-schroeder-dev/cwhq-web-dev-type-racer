@@ -1,0 +1,122 @@
+var words = [
+    'straight',
+    'fish',
+    'mate',
+    'cooing',
+    'representative',
+    'hate',
+    'jazzy',
+    'jaded',
+    'cautious',
+    'slip',
+    'plan',
+    'dirty',
+    'shivering',
+    'cheese',
+    'title',
+    'retire',
+    'temper',
+    'painstaking',
+    'guttural',
+    'sky',
+    'hateful',
+    'impartial',
+    'lamp',
+    'colour',
+    'longing',
+    'undress',
+    'thumb',
+    'grip',
+    'fence',
+    'shallow',
+    'black-and-white',
+    'ambitious',
+    'delicious',
+    'terrible',
+    'railway',
+    'telling',
+    'pretend',
+    'stew',
+    'skirt',
+    'excellent',
+    'son',
+    'possess',
+    'cruel',
+    'whine',
+    'collect',
+    'bite',
+    'hour',
+    'trite',
+    'inexpensive',
+    'bleach',
+    'psychotic',
+    'nest',
+    'kind',
+    'relieved',
+    'guide',
+    'vast',
+    'boil',
+    'exist',
+    'violent',
+    'colossal',
+    'ink',
+    'cooperative',
+    'tight',
+    'phobic',
+    'thank',
+    'crowded',
+    'brake',
+    'celery',
+    'abaft',
+    'blush',
+    'puffy',
+    'breezy',
+    'periodic',
+    'well-to-do',
+    'house',
+    'saw',
+    'bells',
+    'gruesome',
+    'scratch',
+    'toothsome',
+    'crack',
+    'buzz',
+    'object',
+    'shocking',
+    'imminent',
+    'joke',
+    'surprise',
+    'wooden',
+    'quill',
+    'steep',
+    'clean',
+    'reflect',
+    'thoughtless',
+    'shoes',
+    'voyage',
+    'grubby',
+    'slip',
+    'rampant',
+    'acid',
+    'deceive'
+];
+
+
+var launchCodeInput = document.getElementById('input0');
+
+launchCodeInput.addEventListener('focus', () => {
+    var sound = addSoundEffect('helicopter.mp3');
+    setTimeout(() => {
+        sound.play();
+    }, 0);
+});
+
+var launchButton = document.getElementById('button0');
+
+launchButton.addEventListener('click', () => {
+    var sound = addSoundEffect('ignition.wav');
+    setTimeout(() => {
+        sound.play();
+    }, 10000);
+});
+

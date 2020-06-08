@@ -1,0 +1,16 @@
+body {
+	background-image: url('./cycle.jpeg');
+}
+
+h1 {
+	text-align: center;
+	color: #ff0;
+	font-size: 82px;
+}
+
+#randomWordContainer {
+	margin: 0 auto;
+	background-color: #222;
+	width: 400px;
+	color: #fff;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Type Racer</title>
+	<link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.5.1.min.js"
+	  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+	  crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<h1>Type Racer</h1>
+
+	<p id="correctlyTypedWords">0</p>
+
+	<div class="random-word__container">
+		<p id="randomWord"></p>
+		<input type="text" name="word" id="word" />
+	</div>
+
+	<p class="game-over-message">Game Over!</p>
+
+	<p class="timer">5</p>
+
+<script type="text/javascript" src="./words.js"></script>
+<script type="text/javascript">
+	
+	var correctlyTypedWords = 0;
+
+	$('input').focus();
+	$('.game-over-message').hide();
+	showRandomWord();
+	
+	$('input').keyup(checkUserInput);
+
+	var time = 5;
+	var interval = setInterval(() => {
+		time--;
+		$('.timer').text(time);
+		if (time == 0 ) {
+			clearInterval(interval);
+			document.querySelector('.random-word__container').remove();
+			$('.game-over-message').show();
+		}
+	}, 1000);
+	
+	// words exists from words.js
+	function showRandomWord()	{
+		var randomIndex = Math.floor(Math.random() * words.length);
+		var randomWord = words[randomIndex];
+		words.splice(randomIndex, 1);
+		$('#randomWord').text(randomWord);
+	}
+
+	function checkUserInput(event) {
+		var userWord = $('input').val();
+		var randomWord = $('#randomWord').text();
+		if (userWord == randomWord) {
+			correctlyTypedWords++;
+			$('#correctlyTypedWords').text(correctlyTypedWords);
+			showRandomWord();
+			$('input').val('');
+		}
+	}
+
+</script>
+</body>
+</html>
